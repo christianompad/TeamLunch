@@ -6,7 +6,7 @@
 
 
 function showBreakDown(){
-    var msg = "Order Breakdown: ";
+    var msg ="";
     var meals=document.getElementById("meals").value;
     var totalMeals=meals;
     var nutFree=document.getElementById("nf").value;
@@ -31,7 +31,7 @@ function showBreakDown(){
         msg=msg+" Fish Free "+"("+fishFree+")";
     }
     
-    var msgHead ="Meal Break down: "+"Total="+totalMeals+" No restrictions="+meals+" "+msg;
+    var msgHead ="Total("+totalMeals+") Breakdown: No restrictions("+meals+") "+msg;
     document.getElementById("breakdown").innerHTML=msgHead;
     
 }

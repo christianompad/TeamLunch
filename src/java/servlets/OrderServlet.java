@@ -71,7 +71,8 @@ public class OrderServlet extends HttpServlet {
 
                 mealsInt = mealsInt - veggieInt - nutInt - glutenInt - fishInt;
                 List<String> logList = new ArrayList<>();
-                String log = "";
+                String log = "Orders";
+                logList.add(log);
                 for (int i = 0; i < lr.size(); i++) {
 
                     if (mealsInt > lr.get(i).getNoRestriction()) {
@@ -110,7 +111,7 @@ public class OrderServlet extends HttpServlet {
 
                     fishInt = fishInt - fGet;
 
-                    if (mGet >= 0 && vGet >= 0 && nGet >= 0 && gGet >= 0 && fGet >= 0) {
+                    if (mGet > 0 && vGet >= 0 && nGet >= 0 && gGet >= 0 && fGet >= 0) {
                         log = lr.get(i).getName() + "\n No restrictions: " + mGet + "\n Vegetarian: " + vGet + "\n Nut-free: " + nGet + "\n Gluten-free: " + gGet + "\n Fish-free: " + fGet;
                         logList.add(log);
                     }
